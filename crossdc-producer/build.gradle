@@ -47,6 +47,7 @@ dependencies {
     testImplementation group: 'org.apache.solr', name: 'solr-solrj', version: "${solrVersion}"
     testImplementation group: 'org.apache.solr', name: 'solr-solrj-zookeeper', version: "${solrVersion}"
     testImplementation group: 'org.apache.solr', name: 'solr-test-framework', version: "${solrVersion}"
+    testImplementation group: 'org.apache.zookeeper', name: 'zookeeper', version: '3.9.1'
 
     testImplementation group: 'org.slf4j', name: 'slf4j-simple', version: '2.0.9'
     testImplementation "org.apache.kafka:kafka-clients:${kafkaVersion}:test"

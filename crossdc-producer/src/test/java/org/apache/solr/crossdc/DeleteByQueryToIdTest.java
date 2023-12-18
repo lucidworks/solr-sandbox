@@ -18,6 +18,7 @@ import org.apache.solr.cloud.SolrCloudTestCase;
 import org.apache.solr.common.SolrInputDocument;
 import org.apache.solr.common.params.CommonParams;
 import org.apache.solr.common.util.ObjectReleaseTracker;
+import org.apache.solr.crossdc.common.CrossDcConf;
 import org.apache.solr.crossdc.common.KafkaCrossDcConf;
 import org.apache.solr.crossdc.common.MirroredSolrRequest;
 import org.apache.solr.crossdc.consumer.Consumer;
@@ -65,6 +66,7 @@ import java.util.concurrent.CountDownLatch;
   public static void beforeSolrAndKafkaIntegrationTest() throws Exception {
 
     System.setProperty(KafkaCrossDcConf.PORT, "-1");
+    System.setProperty(CrossDcConf.COLLAPSE_UPDATES, CrossDcConf.CollapseUpdates.ALL.name());
     consumer = new Consumer();
     System.setProperty("solr.crossdc.dbq_rows", "1");
 

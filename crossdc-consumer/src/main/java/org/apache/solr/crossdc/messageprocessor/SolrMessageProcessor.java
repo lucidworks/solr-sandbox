@@ -184,7 +184,7 @@ public class SolrMessageProcessor extends MessageProcessor implements IQueueHand
         if (client.getClusterStateProvider() instanceof ZkClientClusterStateProvider) {
             connectString = ((ZkClientClusterStateProvider) client.getClusterStateProvider()).getZkHost();
         } else {
-            connectString = client.getClusterStateProvider().getQuorumHosts();
+            connectString = client.toString();
         }
         if (log.isDebugEnabled()) {
             log.debug("Sending request to Solr at address={} with params {}", connectString, request.getParams());
