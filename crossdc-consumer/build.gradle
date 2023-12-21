@@ -29,14 +29,14 @@ application {
 }
 
 dependencies {
-    implementation group: 'org.apache.solr', name: 'solr-solrj', version: "${solrVersion}" {
+    implementation group: 'org.apache.solr', name: 'solr-solrj', version: "${solrVersion}", {
         exclude group: "org.apache.logging.log4j", module: "*"
         exclude group: "org.slf4j", module: "*"
         exclude group: "org.eclipse.jetty", module: "jetty-http"
         exclude group: "org.eclipse.jetty", module: "jetty-server"
         exclude group: "org.eclipse.jetty", module: "jetty-servlet"
     }
-    implementation group: 'org.apache.solr', name: 'solr-solrj-zookeeper', version: "${solrVersion}" {
+    implementation group: 'org.apache.solr', name: 'solr-solrj-zookeeper', version: "${solrVersion}", {
         exclude group: "org.apache.logging.log4j", module: "*"
         exclude group: "org.slf4j", module: "*"
         exclude group: "org.eclipse.jetty", module: "jetty-http"
